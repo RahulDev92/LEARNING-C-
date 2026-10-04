@@ -7,7 +7,7 @@ void pattern(int n){
             cout << "*" ;
         }
         cout << endl;
-    };
+    }
 
 }
 
