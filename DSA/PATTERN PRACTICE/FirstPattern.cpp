@@ -84,10 +84,80 @@ void pattern8(int n){
         
     }
 }
+void pattern9 (int n){
+    for (int i =1; i<=n; i++){
+        for (int j = 1; j<=i; j++){
+            cout << j ; 
+        }
+        for (int k = 1; k <=n-i; k++){
+            cout << " ";
+        }
+        for (int j=1; j<=n-i; j++){
+            cout << " ";
+        }
+        for (int k =i; k>=1; k--){
+            cout << k;
+        }
+        cout << endl;
+
+
+    }
+}
+void pattern10 (int n){
+    int ver = 1;
+    for (int i = 1; i<=n; i++){
+        for (int j = 1; j<=i; j++){
+            cout << ver;
+            ver= ver+1;
+
+        }
+        cout<<endl;
+    }
+}
+void pattern11 (int n){
+    for (int i = 0; i <=n ; i++){
+        for (char ch ='A'; ch <= 'A' +i; ch++){
+            cout << ch ;
+
+
+        }
+        cout <<endl;
+    }
+}
+void pattern12 (int n){
+    for (int i =0 ; i<n; i++){
+        for (char ch = 'A'; ch <'A'+( n-i); ch++){
+            cout << ch;
+        }
+        cout << endl;
+    }
+}
+void pattern13 (int n){
+    char ch = 'A';
+    for (int i= 0; i<n; i++){
+        for (int j = 0; j<=i; j++){
+            cout << ch;
+            
+            
+        }
+        ch = ch +1;
+        cout << endl;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 int main() {
     int n;
     cout << "enter a number : ";
     cin >> n;
-    pattern8(n);
+    pattern13(n);
     return 0;
 }
