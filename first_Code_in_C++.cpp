@@ -6,9 +6,6 @@ int main(){
     cout << "my name is Rahul" << endl;
     cout << "i am learning c++" << endl;
     cout << "I am new in github.";
-    
-
-    
 
 
 

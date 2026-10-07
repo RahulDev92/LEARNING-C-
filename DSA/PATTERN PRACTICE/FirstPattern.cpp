@@ -144,10 +144,41 @@ void pattern13 (int n){
         cout << endl;
     }
 }
-
-
-
-
+void pattern14 (int n) {
+    for (int i = 0 ; i < n; i++){
+        // space
+        for (int j = 0; j< n-i-1; j++){
+            cout << " ";
+        }
+        // charcter
+        char ch = 'A';
+        
+        for (int j = 0 ; j< 2*i +1; j++){
+            cout << ch;
+            if  (j<(2*i+1)/2){
+                ch++;
+            }else {
+                ch--;
+            }
+        }
+        // space
+        
+        
+        cout << endl;
+    }
+}
+void pattern15 (int n) {
+    for (int i = 1; i<=n; i++){
+        char ch = 'A';
+        for (int j =1; j<=i; j++){
+            cout << ch;
+            
+        }
+        cout << endl;
+    }
+}
+    
+    
 
 
 
@@ -158,6 +189,6 @@ int main() {
     int n;
     cout << "enter a number : ";
     cin >> n;
-    pattern13(n);
+    pattern15(n);
     return 0;
 }
