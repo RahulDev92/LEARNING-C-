@@ -245,7 +245,7 @@ void pattern15 (int n) {
  }   
  void pattern17 (int n){
     int space1 = 2 *n - 2;
-    int space2 = 0;
+    int space2 = 2;
     for (int i = 1; i <= n; i++){
         // star
         for ( int j= 1 ; j <= i; j++){
@@ -267,8 +267,8 @@ void pattern15 (int n) {
     
     }    
 
-    for (int i =1 ; i <= n; i++){
-        for (int j = 1; j<= n-i+1; j++){
+    for (int i =1 ; i < n; i++){
+        for (int j = 1; j<= n-i; j++){
             cout << "*";
 
         }
@@ -279,7 +279,7 @@ void pattern15 (int n) {
 
         }    
         // star
-        for (int j = 1 ; j <= n-i+1; j++ ){
+        for (int j = 1 ; j <= n-i; j++ ){
             cout << "*";
 
         }
@@ -291,8 +291,32 @@ void pattern15 (int n) {
        
     }
  }   
+void pattern18 (int n){
+    for (int i = 0; i <n; i++){
+        for (int j = 0; j< n ; j++){
+            if (i==0 || j==0 || i == n-1 || j == n-1){
+                cout << "*";
 
+            }else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+void pattern19 (int n){
+    for (int i = 0; i < 2*n - 1 ; i++){
+        for (int j = 0; j< 2*n-1; j++){
+            int top = i;
+            int left = j;
+            int right = (2*n-2) - j;
+            int down = (2*n-2) - i;
+            cout << n - (min(min(top,down), min(left, right)));
 
+        }
+        cout << endl;
+    }
+}
 
 
 
@@ -301,6 +325,6 @@ int main() {
     int n;
     cout << "enter the number : ";
     cin >> n;
-    pattern17(n);
+    pattern19(n);
     return 0;
 }
